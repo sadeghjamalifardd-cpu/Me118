@@ -11,5 +11,6 @@ npm i @capacitor/core@6 @capacitor/cli@6 @capacitor/android@6
 npm i @aparajita/capacitor-biometric-auth@9 || echo "biometric plugin install failed"
 npx cap add android
 npx cap sync android
+sed -i -E 's#gradle-[0-9.]+-(bin|all)\.zip#gradle-8.5-bin.zip#' android/gradle/wrapper/gradle-wrapper.properties
 cd android
 ./gradlew assembleDebug
